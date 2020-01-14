@@ -1,0 +1,26 @@
+From f8c34b1f0f503a35a37bd5cd1f729955cf2fb262 Mon Sep 17 00:00:00 2001
+From: xiaoweiwei <xiaoweiwei5@huawei.com>
+Date: Tue, 14 Jan 2020 19:18:06 +0800
+Subject: [PATCH] libqmi: add patch to modify build err
+
+Signed-off-by: Buildteam <buildteam@openeuler.org>
+---
+ configure | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure b/configure
+index f299c70..4ba1ac3 100755
+--- a/configure
++++ b/configure
+@@ -12207,7 +12207,7 @@ $as_echo "$has_option" >&6; }
+ 	done
+ 	unset option
+ 	if test "x$set_more_warnings" = xerror; then
+-		CFLAGS="$CFLAGS -Werror"
++		CFLAGS="$CFLAGS"
+ 	fi
+ else
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-- 
+1.8.3.1
+
