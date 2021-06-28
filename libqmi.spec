@@ -1,12 +1,12 @@
 Name:          libqmi
 Version:       1.26.4
-Release:       1
+Release:       2
 License:       LGPLv2+ and GPLv2+
 Summary:       A glib-based library to use the Qualcomm MSM Interface (QMI) protocol
 URL:           http://freedesktop.org/software/libqmi
 Source0:       http://freedesktop.org/software/libqmi/libqmi-%{version}.tar.xz
 
-BuildRequires: glib2-devel >= 2.32.0 libgudev-devel >= 147 libmbim-devel >= 1.14.0 python3 gtk-doc
+BuildRequires: glib2-devel >= 2.32.0 libgudev-devel >= 147 libmbim-devel >= 1.18.0 python3 gtk-doc
 Provides:      libqmi-utils = %{version}-%{release}
 Obsoletes:     libqmi-utils < 1.20.0.4
 
@@ -65,6 +65,9 @@ find %{buildroot}%{_datadir}/gtk-doc | xargs touch --reference configure.ac
 %{_mandir}/man1/*
 
 %changelog
+* Mon Jun 28 2021 liuyumeng <liuyumeng5@huawei.com> - 1.26.4-2
+- update libmbim-devel version from 1.14.0 to 1.18.0
+
 * Wed Aug 26 2020 lunankun <lunankun@huawei.com> - 1.26.4-1
 - Type:requirement
 - ID:NA
