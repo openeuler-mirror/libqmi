@@ -1,12 +1,12 @@
 Name:          libqmi
 Version:       1.26.2
-Release:       2
+Release:       3
 License:       LGPLv2+ and GPLv2+
 Summary:       A glib-based library to use the Qualcomm MSM Interface (QMI) protocol
 URL:           http://freedesktop.org/software/libqmi
 Source0:       http://freedesktop.org/software/libqmi/libqmi-%{version}.tar.xz
 
-BuildRequires: glib2-devel >= 2.32.0 libgudev-devel >= 147 libmbim-devel >= 1.14.0 python3 gtk-doc gcc
+BuildRequires: glib2-devel >= 2.32.0 libgudev-devel >= 147 libmbim-devel >= 1.18.0 python3 gtk-doc gcc
 Provides:      libqmi-utils = %{version}-%{release}
 Obsoletes:     libqmi-utils < 1.20.0.4
 
@@ -65,6 +65,9 @@ find %{buildroot}%{_datadir}/gtk-doc | xargs touch --reference configure.ac
 %{_mandir}/man1/*
 
 %changelog
+* Mon Jun 28 2021 liuyumeng <liuyumeng5@huawei.com> - 1.26.2-3
+- update libmbim-devel version from 1.14.0 to 1.18.0
+
 * Tue Jun 08 2021 wulei <wulei80@huawei.com> - 1.26.2-2
 - fixes failed: error: no acceptable C compiler found in $PATH
 
